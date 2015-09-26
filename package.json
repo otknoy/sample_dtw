@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "dtw": "0.0.3",
-    "jquery": "^2.1.4"
+  "dependencies": {
+    "browserify": "^11.2.0",
+    "dtw": "0.0.3"
   }
 }
