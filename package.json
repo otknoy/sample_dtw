@@ -6,7 +6,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "browserify": "^11.2.0",
     "dtw": "0.0.3"
   }
 }
