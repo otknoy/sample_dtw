@@ -17,7 +17,7 @@ for (var i = 0; i < ts.length; i++) {
     var $result = $('<div>');
     var $t0 = $('<p>').text(ts[0]);
     var $t1 = $('<p>').text(ts[i]);
-    var $cost = $('<p>').text(cost);
+    var $cost = $('<p>').text('cost: ' + cost);
     $result.append($t0);
     $result.append($t1);
     $result.append($cost);
