@@ -1,5 +1,6 @@
+var $ = require('jquery');
 var DTW = require('dtw');
-
+// var Leap = require('leapjs');
 
 var ts = [[1, 2, 3, 4, 5],
 	  [1, 2, 3, 4, 4],
@@ -13,21 +14,13 @@ for (var i = 0; i < ts.length; i++) {
     var cost = dtw.compute(ts[0], ts[i]);
     var path = dtw.path();
 
-    console.log("\n");
-    console.log(ts[0]);
-    console.log(ts[i]);
-    console.log(cost);
-    console.log(path);
+    var $result = $('<div>');
+    var $t0 = $('<p>').text(ts[0]);
+    var $t1 = $('<p>').text(ts[i]);
+    var $cost = $('<p>').text(cost);
+    $result.append($t0);
+    $result.append($t1);
+    $result.append($cost);
 
-    var div = document.createElement('div');
-
-    var ts0 = document.createTextNode(ts[0] + '\n');
-    var tsi = document.createTextNode(ts[i] + '\n');
-    var c = document.createTextNode('cost:' + cost + '\n');
-    var p = document.createTextNode('path:' + path + '\n');
-
-    document.body.appendChild(ts0);
-    document.body.appendChild(tsi);
-    document.body.appendChild(c);
-    document.body.appendChild(p);
+    $('#content').append($result);
 }
